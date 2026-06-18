@@ -1,0 +1,132 @@
+/* ==========================================================================
+   AGRINHO 2026 - CONFIGURAÇÕES GERAIS E VARIÁVEIS
+   ========================================================================== */
+:root {
+    /* Paleta de cores inspirada no tema Agrinho (Campo, Sustentabilidade e Tecnologia) */
+    --cor-primaria: #2E7D32;       /* Verde escuro (natureza/agricultura) */
+    --cor-secundaria: #81C784;     /* Verde claro de destaque */
+    --cor-auxiliar: #FFB74D;       /* Laranja/Amarelo (sol/colheita) */
+    --cor-fundo: #F5F5F5;          /* Cinza claro para o fundo do site */
+    --cor-card: #FFFFFF;           /* Branco para blocos de conteúdo */
+    --cor-texto-escuro: #212121;   /* Grafite para legibilidade dos textos */
+    --cor-texto-claro: #FFFFFF;    /* Branco para textos sobre fundos escuros */
+    
+    /* Fontes */
+    --fonte-principal: 'Arial', sans-serif;
+}
+
+/* Reset básico para garantir consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-escuro);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   LAYOUT E ESTRUTURA (HEADER, NAV, MAIN, FOOTER)
+   ========================================================================== */
+
+/* Cabeçalho */
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+/* Menu de Navegação */
+nav {
+    background-color: var(--cor-secundaria);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav a {
+    color: var(--cor-texto-escuro);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-texto-claro);
+}
+
+/* Conteúdo Principal */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Seções de Conteúdo */
+section {
+    background-color: var(--cor-card);
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--cor-auxiliar);
+    padding-bottom: 5px;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cor-texto-escuro);
+    color: var(--cor-texto-claro);
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (DESIGN ADAPTÁVEL PARA CELULARES)
+   ========================================================================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    main {
+        margin: 10px auto;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
